@@ -14,8 +14,10 @@ capsLock = False
 n = 0
 
 while n in range (0,999):
-    rnum = random.randint(0,int(len(one)))
-    if rnum == (int(len(one))):
+    rnum = random.randint(0,int(len(one)+2))
+    if rnum == (int(len(one)+2)):
+        f.truncate(int(n-1))
+    if rnum == (int(len(one)+1)):
         capsLock = not capsLock
     if capsLock == False:
         if rnum in range (0,(int(len(one)-2))):
